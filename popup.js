@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
     var checkPageButton = document.getElementById('checkPage');
     checkPageButton.addEventListener('click', function() {
-        chrome.tabs.create({'url': "https://www.google.com"}, testing);
+        chrome.tabs.create({'url': "https://www.google.com"});
     });
+});
 
-    function testing() {
-        chrome.tabs.executeScript(tab.id, {file: 'alert.js'});
-    }
+chrome.tabs.onCreated.addListener((tab) => {
+    chrome.tabs.executeScript(tab.id, {file: 'alert.js'});
 });
