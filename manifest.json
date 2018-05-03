@@ -9,6 +9,11 @@
     "default_icon": "favicon.ico",
     "default_popup": "popup.html"
   },
+  "background":{
+    "scripts": [
+      "background.js"
+    ]
+  },
   "permissions": [
     "tabs", "<all_urls>"
   ]
